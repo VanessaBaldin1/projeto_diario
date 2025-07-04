@@ -1,0 +1,392 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores do Tema Claro (Padrão) */
+    --cor-primaria: #6A057F; 
+    --cor-secundaria: #8E2DE2; 
+    --cor-terciaria: #FCF6B1; 
+    --cor-fundo-claro: #F5F5DC; 
+    --cor-texto-claro: #333333; 
+    --cor-borda-cartao: #ddd;
+    --cor-sombra-cartao: rgba(0, 0, 0, 0.1);
+    --cor-botao-modo: #6A057F;
+    --cor-texto-botao-modo: #fff;
+    --cor-link: #6A057F;
+    --cor-link-hover: #8E2DE2;
+
+    /* Cores de Status */
+    --cor-status-completo: #28a745; 
+    --cor-status-em-progresso: #ffc107; 
+    --cor-status-revisar: #007bff; 
+}
+
+/* Tema Escuro */
+body.modo-escuro {
+    --cor-primaria: #BB86FC; 
+    --cor-secundaria: #3700B3; 
+    --cor-terciaria: #FCF6B1; 
+    --cor-fundo-claro: #121212; 
+    --cor-texto-claro: #E0E0E0; 
+    --cor-borda-cartao: #333;
+    --cor-sombra-cartao: rgba(255, 255, 255, 0.1);
+    --cor-botao-modo: #BB86FC;
+    --cor-texto-botao-modo: #121212;
+    --cor-link: #BB86FC;
+    --cor-link-hover: #03DAC6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-fundo-claro);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cabecalho {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px var(--cor-sombra-cartao);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.cabecalho__conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho__titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem; 
+}
+
+.cabecalho__navegacao {
+    margin-top: 1rem; 
+}
+
+.cabecalho__lista-navegacao {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5rem; 
+}
+
+.cabecalho__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.cabecalho__link:hover {
+    color: var(--cor-terciaria);
+}
+
+.cabecalho__botao-modo {
+    background-color: var(--cor-botao-modo);
+    color: var(--cor-texto-botao-modo);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho__botao-modo:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Seção de Introdução - Parallax */
+.secao-introducao {
+    background-image: url('../images/imagem-aprendizado.png'); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden; 
+}
+
+.secao-introducao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.secao-introducao__overlay {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.secao-introducao__titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.secao-introducao__descricao {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Seção de Artigos */
+.secao-artigos__titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--cor-primaria);
+}
+
+.artigos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.cartao-artigo {
+    background-color: var(--cor-fundo-claro);
+    border: 1px solid var(--cor-borda-cartao);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px var(--cor-sombra-cartao);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative; 
+}
+
+.modo-escuro .cartao-artigo {
+    background-color: #1a1a1a;
+}
+
+.cartao-artigo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px var(--cor-sombra-cartao);
+}
+
+.cartao-artigo__cabecalho {
+    margin-bottom: 1rem;
+}
+
+.cartao-artigo__titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    color: var(--cor-primaria);
+    margin-bottom: 0.5rem;
+}
+
+.modo-escuro .cartao-artigo__titulo {
+    color: var(--cor-link);
+}
+
+.cartao-artigo__data {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.modo-escuro .cartao-artigo__data {
+    color: #bbb;
+}
+
+.cartao-artigo__corpo {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.cartao-artigo__resumo {
+    font-size: 1rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 1rem;
+}
+
+.cartao-artigo__tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.cartao-artigo__tag {
+    background-color: var(--cor-secundaria);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+/* Cores de status específicas */
+.cartao-artigo__tag.status-completo {
+    background-color: var(--cor-status-completo);
+}
+
+.cartao-artigo__tag.status-em-progresso {
+    background-color: var(--cor-status-em-progresso);
+    color: #333; 
+}
+
+.cartao-artigo__tag.status-revisar {
+    background-color: var(--cor-status-revisar);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+}
+
+.rodape__conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.rodape__texto {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.rodape__redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.rodape__link-social {
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    font-weight: 500;
+   transition: color 0.3s ease, transform 0.2s ease;
+   position: relative;
+}
+
+.rodape__link-social::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff; 
+    transition: width 0.3s ease;
+}
+
+.rodape__link-social:hover,
+.rodape__link-social:focus {
+    color: #fff; 
+    transform: translateY(-2px); 
+    outline: none; 
+}
+
+.rodape__link-social:hover::after,
+.rodape__link-social:focus::after {
+    width: 100%; 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho__conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabecalho__navegacao {
+        width: 100%;
+    }
+
+    .cabecalho__lista-navegacao {
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .cabecalho__titulo {
+        font-size: 1.5rem;
+    }
+
+    .secao-introducao__titulo {
+        font-size: 2rem;
+    }
+
+    .secao-introducao__descricao {
+        font-size: 1rem;
+    }
+
+    .secao-artigos__titulo {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .artigos__grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .cartao-artigo {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho__lista-navegacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecalho__botao-modo {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .conteudo-principal {
+        padding: 0 1rem;
+    }
+}

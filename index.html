@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Jornada de Aprendizado - Diário</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="corpo-pagina">
+    <header class="cabecalho">
+        <div class="cabecalho__conteudo">
+            <h1 class="cabecalho__titulo">Commit Diário - Vanessa Baldin</h1>
+            <nav class="cabecalho__navegacao">
+                <ul class="cabecalho__lista-navegacao">
+                    <li><a href="#artigos" class="cabecalho__link">Artigos Recentes</a></li>
+                    <li><a href="#sobre" class="cabecalho__link">Sobre Mim</a></li>
+                    <li><button id="alternar-modo" class="cabecalho__botao-modo">Modo Escuro</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="secao-introducao paralaxe">
+            <div class="secao-introducao__overlay">
+                <h2 class="secao-introducao__titulo">Explorando o Mundo do Desenvolvimento Web</h2>
+                <p class="secao-introducao__descricao">Um diário das minhas descobertas, desafios e aprendizados
+                    contínuos em programação.</p>
+            </div>
+        </section>
+
+        <section id="artigos" class="secao-artigos">
+            <h2 class="secao-artigos__titulo">Meus Artigos</h2>
+            <div class="artigos__grid">
+                <article class="cartao-artigo">
+                    <header class="cartao-artigo__cabecalho">
+                        <h3 class="cartao-artigo__titulo">Dominando Flexbox: </h3>
+                        <time datetime="2025-06-24" class="cartao-artigo__data">24 de Junho de 2025</time>
+                    </header>
+                    <div class="cartao-artigo__corpo">
+                        <p class="cartao-artigo__resumo">Neste artigo, mergulhei fundo nas propriedades do Flexbox,
+                            entendendo como ele revoluciona a criação de layouts responsivos. Aprendi sobre
+                            `flex-direction`, `justify-content` e `align-items`.</p>
+                        <ul class="cartao-artigo__tags">
+                            <li class="cartao-artigo__tag status-completo">Concluído</li>
+                            <li class="cartao-artigo__tag">CSS</li>
+                            <li class="cartao-artigo__tag">Layout</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cartao-artigo">
+                    <header class="cartao-artigo__cabecalho">
+                        <h3 class="cartao-artigo__titulo">Comandos Terminal: </h3>
+                        <time datetime="2025-07-01" class="cartao-artigo__data">01 de Julho de 2025</time>
+                    </header>
+                    <div class="cartao-artigo__corpo">
+                        <p class="cartao-artigo__resumo">Comecei a explorar os comandos do terminal. Parece complicado
+                            no início, mas já percebo como pode facilitar o dia a dia. Com prática, acho que vou tirar
+                            bastante proveito.</p>
+                        <ul class="cartao-artigo__tags">
+                            <li class="cartao-artigo__tag status-em-progresso">Em Progresso</li>
+                            <li class="cartao-artigo__tag">Terminal</li>
+                            <li class="cartao-artigo__tag">Fundamentos</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cartao-artigo">
+                    <header class="cartao-artigo__cabecalho">
+                        <h3 class="cartao-artigo__titulo">Git e GitHub: Revisão</h3>
+                        <time datetime="2025-07-02" class="cartao-artigo__data">02 de Julho de 2025</time>
+                    </header>
+                    <div class="cartao-artigo__corpo">
+                        <p class="cartao-artigo__resumo">Primeiros passos com Git e GitHub: entendendo o controle de
+                            versão e colaboração no código</p>
+                        <ul class="cartao-artigo__tags">
+                            <li class="cartao-artigo__tag status-revisar">Revisar</li>
+                            <li class="cartao-artigo__tag">Git</li>
+                            <li class="cartao-artigo__tag">GitHub</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cartao-artigo">
+                    <header class="cartao-artigo__cabecalho">
+                        <h3 class="cartao-artigo__titulo">Reunião de mentoria Boticário</h3>
+                        <time datetime="2025-07-03" class="cartao-artigo__data">03 de Julho de 2025</time>
+                    </header>
+                    <div class="cartao-artigo__corpo">
+                        <p class="cartao-artigo__resumo">Conhecendo os mentores do <b>Grupo Boticário</b> e quem será o meu mentor, proposta da mentoria.</p>
+                        <ul class="cartao-artigo__tags">
+                             <li class="cartao-artigo__tag status-completo">Concluído</li>
+                            <li class="cartao-artigo__tag">Mentoria</li>
+                            <li class="cartao-artigo__tag">Mentor</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cartao-artigo">
+                    <header class="cartao-artigo__cabecalho">
+                        <h3 class="cartao-artigo__titulo">Ajustes finais do Projeto 1</h3>
+                        <time datetime="2025-07-04" class="cartao-artigo__data">04 de Julho de 2025</time>
+                    </header>
+                    <div class="cartao-artigo__corpo">
+                        <p class="cartao-artigo__resumo">Finalizando os CSS do modo-escuro</p>
+                        <ul class="cartao-artigo__tags">
+                       <li class="cartao-artigo__tag status-em-progresso">Em Progresso</li>
+                            <li class="cartao-artigo__tag">CSS</li>
+                            <li class="cartao-artigo__tag">JS para animação</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cartao-artigo">
+                    <header class="cartao-artigo__cabecalho">
+                        <h3 class="cartao-artigo__titulo">Git e GitHub: Revisão</h3>
+                        <time datetime="2025-07-02" class="cartao-artigo__data">02 de Julho de 2025</time>
+                    </header>
+                    <div class="cartao-artigo__corpo">
+                        <p class="cartao-artigo__resumo">Primeiros passos com Git e GitHub: entendendo o controle de
+                            versão e colaboração no código</p>
+                        <ul class="cartao-artigo__tags">
+                            <li class="cartao-artigo__tag status-revisar">Revisar</li>
+                            <li class="cartao-artigo__tag">Git</li>
+                            <li class="cartao-artigo__tag">GitHub</li>
+                        </ul>
+                    </div>
+                </article>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="sobre" class="rodape">
+        <div class="rodape__conteudo">
+            <p class="rodape__texto">Diário de Aprendizado &copy; 2025. Desenvolvido por Vanessa Baldin, movida pela
+                paixão por tecnologia</p>
+            <div class="rodape__redes-sociais">
+                <a href="https://github.com/VanessaBaldin1" target="_blank" class="rodape__link-social">GitHub</a>
+                <a href="https://www.linkedin.com/in/vanessa-sanges-baldin-ux/" target="_blank"
+                    class="rodape__link-social">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('alternar-modo').addEventListener('click', function () {
+            document.body.classList.toggle('modo-escuro');
+
+            // Salvar a preferência do modo-escuro ou modo-claro
+            if (document.body.classList.contains('modo-escuro')) {
+                localStorage.setItem('temaDiario', 'escuro');
+            } else {
+                localStorage.setItem('temaDiario', 'claro');
+            }
+        });
+
+        // Aplicar o tema salvo ao carregar a página
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (localStorage.getItem('temaDiario') === 'escuro' || (window.matchMedia('(prefers-color-scheme: dark)').matches && localStorage.getItem('temaDiario') !== 'claro')) {
+                document.body.classList.add('modo-escuro');
+            }
+        });
+    </script>
+</body>
+
+</html>
